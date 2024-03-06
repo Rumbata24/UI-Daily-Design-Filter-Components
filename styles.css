@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #180b3d;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f2f7ff;
+  /* max-height: 100vh; */
+}
+
+.top-wrapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  gap: 3.6rem;
+  max-width: 1101px;
+  margin: 100px auto;
+
+  flex-wrap: wrap;
+}
+
+.search-container input {
+  font-size: 1.6rem;
+  padding: 1.6rem;
+
+  background: url(./search-icon.png) no-repeat scroll 12px 12px;
+  padding-left: 50px;
+
+  border: none;
+  background-color: #fff;
+  border: 1px solid #bdcae0;
+  border-radius: 12px;
+  width: 100%;
+  height: 64px;
+  margin-bottom: 1rem;
+}
+
+.dropdown-sort,
+.more-filters {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.dropdown-sort span,
+.more-filters span {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #180b3d;
+  color: white;
+  padding: 1.6rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.dropdown-sort span:hover img,
+.more-filters span:hover img {
+  transform: rotate(180deg);
+}
+
+.dropdown-sort .dropdown-items,
+.more-filters .dropdown-items {
+  display: none;
+  position: absolute;
+  min-width: 192px;
+  background-color: white;
+  padding: 1.6rem;
+  font-size: 1.6rem;
+
+  box-shadow: 0 14px 16px 0 rgba(17, 28, 125, 0.1);
+  border-radius: 8px;
+  padding-top: 1rem;
+  top: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-sort:hover .dropdown-items,
+.dropdown-items:hover,
+.more-filters:hover .dropdown-items,
+.dropdown-items:hover {
+  display: block;
+}
+
+.dropdown-sort .dropdown-items p,
+.more-filters .dropdown-items p {
+  padding: 1.6rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.dropdown-sort .dropdown-items p:hover,
+.more-filters .dropdown-items p:hover {
+  background-color: #f2f7ff;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.terms input[type="checkbox"] {
+  width: 35px !important;
+  height: 35px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background-color: #fff !important;
+  border: 1px solid #bdcae0 !important;
+  border-radius: 12px !important;
+}
+
+.terms label {
+  font-size: 1.6rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+.more-filters {
+  padding: 0;
+}
+
+.more-filters span {
+  background-color: transparent;
+  color: #180b3d;
+}
+
+.bottom-wrapper {
+  background-color: #fff;
+  padding: 5.6rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  max-width: 529px;
+  margin: 200px auto;
+  border-radius: 30px;
+
+  box-shadow: 0 14px 25px 0 rgba(17, 28, 125, 0.1);
+
+  flex-wrap: wrap;
+}
+
+.bottom-wrapper .example-img {
+  width: 97px;
+  height: 97px;
+  background-color: #cfd8e9;
+  border-radius: 8px;
+}
+
+.bottom-wrapper .text {
+  margin-block: 2.2rem;
+  width: 100%;
+}
+
+.text h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.text p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  width: 327px;
+}
+
+.bottom-wrapper .tags {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  /* justify-content: space-between; */
+
+  width: 100vw;
+  margin-bottom: 5rem;
+  flex-wrap: wrap;
+}
+
+.bottom-wrapper .tags p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  background-color: #f2f7ff;
+  border-radius: 30px;
+  padding: 1rem;
+}
+
+.rating p {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+@media screen and (max-width: 1020px) {
+  .top-wrapper {
+    margin: 1rem;
+    max-width: 100%;
+  }
+
+  .bottom-wrapper{
+    padding: 3rem;
+  }
+
+  .bottom-wrapper p {
+    width: 100%;
+  }
+
+  .tags p {
+    
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
